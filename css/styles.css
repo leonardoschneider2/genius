@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Tags
+/* 2. Body
+/* 3. Game
+/*   3.1 Pads
+/*   3.2 Center
+/*      3.2.1 GUI
+/* 4. Footer
+/**********************************/
+
+/**********************************/
+/* Color Guide:
+/* 
+/* #00A74A : normal-green
+/* #9F0F17 : normal-red
+/* #CCA707 : normal-yellow
+/* #094A8F : normal-blue
+/* #13ff7c : light-green
+/* #ff4c4c : light-red
+/* #fed93f : light-yellow
+/* #1c8cff : light-blue
+/* #333333 : gray
+/* #ECE7EE : center
+/* #32050C : counter-color
+/*
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+	--clr-normal-green:   #00A74A;
+	--clr-normal-red:     #9F0F17;
+	--clr-normal-yellow:  #CCA707;
+	--clr-normal-blue:    #094A8F;
+	
+	--clr-light-green:    #13ff7c;
+	--clr-light-red:      #ff4c4c;
+	--clr-light-yellow:   #fed93f;
+	--clr-light-blue:     #1c8cff;
+	
+	--clr-border:		  #333333;
+	--clr-center:  		  #ECE7EE;
+
+	--clr-counter-bg:	  #32050C;
+	--clr-counter-off:	  #430710;
+	--clr-counter-on:	  #DC0D29;
+	
+	--clr-switch: 	      #3193DE;
+
+	--game-size: 54rem;
+	--game-border: 1.5rem solid var(--clr-border);
+
+	/* Options */
+	--options-height: 5.5rem;
+	--options-button-width: 1.6rem;
+
+	/* button turner */
+	--button-turner-height: 3.5rem;
+}
+
+/**********************************/
+/* 1. Tags
+/**********************************/
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-image: url('https://static.vecteezy.com/ti/fotos-gratis/p2/3498715-textura-sem-costura-madeira-carvalho-velho-ou-textura-madeira-moderna-textura-gr%C3%A1tis-foto.JPG');
+	background-size: 50%;
+	background-repeat: repeat;
+	font-family: "bungee", verdana, sans-serif;
+	margin: 10rem;
+}
+
+/**********************************/
+/* 2. Body
+/**********************************/
+
+/**********************************/
+/* 3. Game
+/**********************************/
+
+.genius-page {
+	display: flex;
+	flex-wrap: wrap;
+	height: var(--game-size);
+	margin: 0 auto;
+	position: static;
+	width: var(--game-size);
+} /* container preto ao fundo */
+
+/**********************************/
+/* 3.1 Pads
+/**********************************/
+
+.genius-page__green-button {
+	background-color: var(--clr-normal-green);
+	border: var(--game-border);
+	border-top-left-radius: 100%;
+	height: calc(var(--game-size) / 2);
+	width: calc(var(--game-size) / 2);
+} /* botão verde do genius */
+
+.genius-page__green-button--act {
+	background-color: var(--clr-light-green);
+} /* botão verde aceso */
+
+.genius-page__yellow-button {
+	background-color: var(--clr-normal-yellow);
+	border: var(--game-border);
+	border-bottom-left-radius: 100%;
+	height: calc(var(--game-size) / 2);
+	width: calc(var(--game-size) / 2);
+} /* botão amarelo do genius */
+
+.genius-page__yellow-button--act {
+	background-color: var(--clr-light-yellow);
+} /* botão amarelo aceso */
+
+.genius-page__blue-button {
+	background-color: var(--clr-normal-blue);
+	border: var(--game-border);
+	border-bottom-right-radius: 100%;
+	height: calc(var(--game-size) / 2);
+	width: calc(var(--game-size) / 2);
+} /* botão azul do genius */
+
+.genius-page__blue-button--act {
+	background-color: var(--clr-light-blue);
+} /* botão azul aceso */
+
+.genius-page__red-button {
+	background-color: var(--clr-normal-red);
+	border: var(--game-border);
+	border-top-right-radius: 100%;
+	height: calc(var(--game-size) / 2);
+	width: calc(var(--game-size) / 2);
+} /* botão vermelho do genius */
+
+.genius-page__red-button--act {
+	background-color: var(--clr-light-red);
+} /* botão vermelho aceso */
+
+/**********************************/
+/* 3.2 Center
+/**********************************/
+
+.controlers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--clr-border);
+	background-color: var(--clr-center);
+	border: var(--game-border);
+	border-radius: 100%;
+	height: calc(var(--game-size) / 2);
+	margin: calc(var(--game-size) / 4);
+	position: absolute;
+	width: calc(var(--game-size) / 2);
+	gap: 1.5rem;
+}
+
+.controlers__title {
+	font-size: 3.2rem;
+	font-weight: 400;
+	display: flex;
+	margin: 0;
+} /* Logo-marca de Genius. Componente */
+
+.controlers__register-symbol {
+	font-size: 2.4rem;
+} /* Simbolo de R ao lado do Logo Genius. Componente */
+
+/* 3.2.1 Options */
+/* ------------------------------------------- */
+
+.controlers-options {
+	display: flex;
+	height: var(--options-height);
+	flex-direction: row;
+	font-size: 2.4rem;
+	width: 20rem;
+	gap: 1rem;
+} /* Controla as opções do game. Container */
+
+.controlers-options__visual-display {
+	align-items: center;
+	background-color: var(--clr-counter-bg);
+	border: 0.4rem solid var(--clr-border);
+	border-radius: 1rem;
+	color: var(--clr-counter-on);
+	display: flex;
+	height: var(--options-height);
+	font-size: 4.8rem;
+	font-family: "Iceland";
+	justify-content: center;
+	width: 8rem;
+}
+
+.start-container, .strict-container {
+	font-family: 'Arima Madurai', sans-serif;
+	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	justify-content: flex-end;
+}
+
+.start-container__button, .strict-container__button {
+	height: var(--options-button-width);
+	width: var(--options-button-width);
+	background-color: var(--clr-border);
+	border: none;
+	display: flex;
+	border-radius: 100%;
+}
+
+.start-container__button div, .strict-container__button div {
+	border-radius: 100%;
+	top: -0.2rem;
+	position: relative;
+	height: var(--options-button-width);
+	width: var(--options-button-width);
+	cursor: pointer;
+}
+
+.start-container__button div:active, .strict-container__button div:active {
+	top: 0;
+}
+
+.strict-container__button div {
+	background-color: var(--clr-normal-blue);
+}
+
+.start-container__button div {
+	background-color: var(--clr-normal-green);
+}
+
+/* 3.2.2 Turner */
+/* ------------------------------------------- */
+
+.controlers-turner {
+	height: var(--button-turner-height);
+	width: 10rem;
+	display: flex;
+	flex-direction: row;
+	gap: 0.4rem;
+	align-items: center;
+	justify-content: center;
+} /* controla o estado Ligado ou desligado. Container */
+
+.controler-turner__button {
+	align-items: center;
+	background-color: var(--clr-border);
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	height: var(--button-turner-height);
+	justify-content: end;
+	padding: 0.5rem;
+	width: 8rem;
+} /* Container preto que agloba o marcador */
+
+.controler-turner__button-marker--on {
+	margin-right: 3rem;
+	transition: margin 0.5s;
+} /* Altera o lado que o botao está visivel */
+
+.controler-turner__button-marker {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	background-color: var(--clr-center);
+	border-radius: 0.2rem;
+	height: 2rem;
+	padding: 0.4rem;
+	transition: margin 0.5s;
+	width: 1.5rem;
+} /* Marcador que aponta ao lado para informar se o Game está Ligado(ON) ou Desligado(OFF) */
+
+.controlers-turner__on {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+} /* Desenho no controlador indicando se o marcador está ligado */
+
+.controlers-turner__on-led {
+	padding: 0.25rem;
+	width: 0.7rem;
+	height: 0.7rem;
+	border-radius: 100%;
+	border: 0.2rem solid var(--clr-border); 
+	background-color: var(--clr-border);
+} /* Colore a cor do led para vermelho */
+
+/**********************************/
+/* 4. Footer
+/**********************************/
+
+footer {
+	background-color: var(--clr-light-red);
+	border-radius: 5px;
+	margin: 0 auto;
+	color: white;
+	margin-top: 40px;
+	font-size: 15px;
+	width: 400px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+footer h3 {
+	text-align: center;
+}
